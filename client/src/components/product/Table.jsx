@@ -44,7 +44,9 @@ const Table = ({ products }) => {
                                     <div
                                         key={i}
                                         className="badge bg-primary m-1">
-                                        {`${name}: ${pivot.quantity}${unit}`}
+                                        <h6>
+                                            {`${name}: ${pivot.quantity}${unit}`}
+                                        </h6>
                                     </div>
                                 ))}
                             </td>
