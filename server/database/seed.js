@@ -7,9 +7,20 @@ const products = require("../data/products.json");
 
 (async () => {
   try {
+    await Material.destroy({ truncate: { cascade: true } });
     await Material.bulkCreate(materials);
     console.log("Materials seeded successfully!!");
   } catch (error) {
     console.log("Materials seeding Error!!", error);
+  }
+})();
+
+(async () => {
+  try {
+    await Product.destroy({ truncate: { cascade: true } });
+    await Product.bulkCreate(products);
+    console.log("Products seeded successfully!!");
+  } catch (error) {
+    console.log("Products seeding Error!!", error);
   }
 })();
