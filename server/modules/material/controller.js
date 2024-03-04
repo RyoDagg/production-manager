@@ -9,6 +9,18 @@ const getAll = async (req, res) => {
   }
 };
 
+// the purpose of this is get get only the necessary fields to be used in select input
+const getAllSelect = async (req, res) => {
+  try {
+    const materials = await Material.findAll({
+      attributes: ["id", "name", "unit"],
+    });
+    res.json(materials);
+  } catch (error) {
+    res.status(404).send(error);
+  }
+};
+
 const create = async (req, res) => {
   try {
     console.log(req.body);
@@ -19,4 +31,4 @@ const create = async (req, res) => {
   }
 };
 
-module.exports = { getAll, create };
+module.exports = { getAll, create, getAllSelect };
