@@ -1,9 +1,10 @@
 {
   "database": {
     "host": "localhost",
-    "user": "root",
+    "username": "root",
     "password": "root",
-    "database": "production_mvp"
+    "database": "production_mvp",
+    "dialect": "mysql"
   },
   "server": { "PORT": 3000 }
 }
