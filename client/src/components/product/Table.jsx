@@ -19,7 +19,8 @@ const Table = ({ products }) => {
                         <th scope="col">#</th>
                         <th scope="col"></th>
                         <th scope="col">Name</th>
-                        <th scope="col" style={{ "width": '50%' }}>Description</th>
+                        <th scope="col" style={{ "maxWidth": '50%' }}>Description</th>
+                        <th scope="col">Materials</th>
                         <th scope="col">Stock</th>
                         <th scope="col">Actions</th>
                     </tr>
@@ -28,9 +29,25 @@ const Table = ({ products }) => {
                     {products.map((product, i) =>
                         <tr key={i}>
                             <th scope="row">#{i + 1}</th>
-                            <td>{product.name}</td>
+                            <td>
+                                <img
+                                    src={product.image}
+                                    alt=""
+                                    className='img-thumbnail'
+                                    style={{ width: '120px' }}
+                                />
+                            </td>
                             <td>{product.name}</td>
                             <td>{product.description}</td>
+                            <td>
+                                {product.Materials.map(({ name, unit, pivot }, i) => (
+                                    <div
+                                        key={i}
+                                        className="badge bg-primary m-1">
+                                        {`${name}: ${pivot.quantity}${unit}`}
+                                    </div>
+                                ))}
+                            </td>
                             <td>{product.stock}</td>
                             <td>❌ ✅ 🛒</td>
                         </tr>
