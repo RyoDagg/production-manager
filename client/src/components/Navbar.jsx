@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
+    const navigateTo = useNavigate()
     return (
         <div>
             <nav className="navbar bg-success shadow navbar-expand-lg">
@@ -8,7 +10,13 @@ const Navbar = () => {
 
                     <ul className="navbar-nav me-auto ml-4 mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Materials</a>
+                            <a
+                                onClick={() => { navigateTo('/materials') }}
+                                className="nav-link"
+                                href="#"
+                            >
+                                Materials
+                            </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Products</a>
