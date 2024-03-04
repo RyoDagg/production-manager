@@ -5,7 +5,13 @@ const Material = require("../material/model");
 const getAll = async (req, res) => {
   try {
     const products = await Product.findAll({
-      include: [{ model: Material, through: { attributes: ['quantity'] } }],
+      include: [
+        {
+          model: Material,
+          attributes: ["name", "unit"],
+          through: { attributes: ["quantity"], as: "pivot" },
+        },
+      ],
     });
     res.json(products);
   } catch (error) {
