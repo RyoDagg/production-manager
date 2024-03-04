@@ -1,7 +1,7 @@
 const db = require("./index");
-const User = require("../modules/product/model");
+const Product = require("../modules/product/model");
 const Material = require("../modules/material/model");
-
+const MaterialProduct = require("../modules/productMaterial/model");
 (async () => {
   try {
     await db.sync({ force: true });
