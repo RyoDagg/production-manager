@@ -20,7 +20,13 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Products</a>
+                            <a
+                                onClick={() => { navigateTo('/products') }}
+                                className="nav-link"
+                                href="#"
+                            >
+                                Products
+                            </a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Productions</a>
