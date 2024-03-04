@@ -1,30 +1,56 @@
 [
   {
     "id": 1,
-    "name": "Table",
-    "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "stock": "150"
+    "name": "Desk Chair",
+    "description": "Ergonomic desk chair with adjustable features.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 50,
+    "materials": [
+      { "id": 1, "quantity": 5 },
+      { "id": 2, "quantity": 2 },
+      { "id": 3, "quantity": 1 }
+    ]
   },
   {
     "id": 2,
-    "name": "Drilling Tool",
-    "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "stock": "150"
+    "name": "LED Monitor",
+    "description": "High-resolution LED monitor for professional use.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 30,
+    "materials": [
+      { "id": 2, "quantity": 0.5 },
+      { "id": 3, "quantity": 0.2 },
+      { "id": 4, "quantity": 1 }
+    ]
   },
   {
     "id": 3,
-    "name": "Chair",
-    "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "stock": "150"
+    "name": "Plastic Chair",
+    "description": "Durable plastic chair for outdoor use.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 80,
+    "materials": [
+      { "id": 2, "quantity": 3 },
+      { "id": 3, "quantity": 1 }
+    ]
   },
   {
     "id": 4,
-    "name": "IPhone",
-    "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "stock": "150"
+    "name": "Wooden Table",
+    "description": "Sturdy wooden table for dining or office use.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 40,
+    "materials": [
+      { "id": 1, "quantity": 2 },
+      { "id": 5, "quantity": 4 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Copper Wire",
+    "description": "High-quality copper wire for electrical wiring.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 60,
+    "materials": [{ "id": 6, "quantity": 1.5 }]
   }
 ]
