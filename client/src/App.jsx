@@ -20,6 +20,7 @@ function App() {
         <Routes>
           <Route path='/' element={<h1>Home</h1>} />
           <Route path='/materials/*' element={<Materials />} />
+          <Route path='/products/*' element={<Materials />} />
         </Routes>
       </div>
     </globalContext.Provider>

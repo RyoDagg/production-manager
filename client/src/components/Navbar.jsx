@@ -1,12 +1,13 @@
-import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
+import { globalContext } from "../App"
 
 const Navbar = () => {
-    const navigateTo = useNavigate()
+    const { navigateTo } = useContext(globalContext)
     return (
         <div>
             <nav className="navbar bg-success shadow navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Production Manager</a>
+                    <a className="navbar-brand" href="/">Production Manager</a>
 
                     <ul className="navbar-nav me-auto ml-4 mb-2 mb-lg-0">
                         <li className="nav-item">
