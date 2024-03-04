@@ -29,7 +29,14 @@ const Table = ({ materials }) => {
                     {materials.map((material, i) =>
                         <tr key={i}>
                             <th scope="row">#{i + 1}</th>
-                            <td>{material.name}</td>
+                            <td>
+                                <img
+                                    src={material.image}
+                                    alt=""
+                                    className='img-thumbnail'
+                                    style={{ width: '120px' }}
+                                />
+                            </td>
                             <td>{material.name}</td>
                             <td>{material.description}</td>
                             <td>{material.unit}</td>
