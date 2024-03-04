@@ -1,34 +1,30 @@
 [
   {
     "id": 1,
-    "name": "wood",
+    "name": "Table",
     "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "unit": "Meter",
     "stock": "150"
   },
   {
     "id": 2,
-    "name": "iron",
+    "name": "Drilling Tool",
     "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "unit": "Kg",
     "stock": "150"
   },
   {
     "id": 3,
-    "name": "White Paint",
+    "name": "Chair",
     "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "unit": "Leter",
     "stock": "150"
   },
   {
     "id": 4,
-    "name": "Plastic",
+    "name": "IPhone",
     "description": "Cras arcu erat, lobortis vel massa eu, egestas gravida ipsum. Nullam id ante dolor. Integer id urna ac nunc lacinia pretium vitae vitae elit. Cras et dignissim metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://cdn-icons-png.flaticon.com/512/6008/6008658.png",
-    "unit": "Meter",
     "stock": "150"
   }
 ]
