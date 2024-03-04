@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Add = ( ) => {
+const Add = ({ submit }) => {
     const [name, setName] = useState()
     const [description, setDescription] = useState()
     const [image, setImage] = useState()
@@ -14,7 +14,7 @@ const Add = ( ) => {
                     <label className="col-4 col-form-label">Name</label>
                     <div className="col-sm-8">
                         <input
-                            onClick={(event) => setName(event.target.value)}
+                            onChange={(event) => setName(event.target.value)}
                             className="form-control" />
                     </div>
                 </div>
@@ -22,7 +22,7 @@ const Add = ( ) => {
                     <label className="col-4 col-form-label">Description</label>
                     <div className="col-sm-8">
                         <input
-                            onClick={(event) => setDescription(event.target.value)}
+                            onChange={(event) => setDescription(event.target.value)}
                             className="form-control" />
                     </div>
                 </div>
@@ -30,7 +30,7 @@ const Add = ( ) => {
                     <label className="col-4 col-form-label">Image</label>
                     <div className="col-sm-8">
                         <input
-                            onClick={(event) => setImage(event.target.value)}
+                            onChange={(event) => setImage(event.target.value)}
                             className="form-control" />
                     </div>
                 </div>
@@ -38,19 +38,20 @@ const Add = ( ) => {
                     <label className="col-2 col-form-label">Unit</label>
                     <div className="col-sm-4">
                         <input
-                            onClick={(event) => setUnit(event.target.value)}
+                            onChange={(event) => setUnit(event.target.value)}
                             className="form-control" />
                     </div>
                     <label className="col-2 col-form-label">Stock</label>
                     <div className="col-sm-4">
                         <input
-                            onClick={(event) => setStock(event.target.value)}
+                        type="number"
+                            onChange={(event) => setStock(event.target.value)}
                             className="form-control" />
                     </div>
                 </div>
                 <div className="mb-3 text-right">
                     <button
-                        onClick={() => console.log(name, description, image, unit, stock)}
+                        onClick={() => submit({ name, description, image, unit, stock })}
                         className="btn btn-primary">Add</button>
                 </div>
             </div>

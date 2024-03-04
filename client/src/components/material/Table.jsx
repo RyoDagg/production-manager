@@ -28,7 +28,7 @@ const Table = ({ materials }) => {
                 <tbody className="table-group-divider">
                     {materials.map((material, i) =>
                         <tr key={i}>
-                            <th scope="row">{i}</th>
+                            <th scope="row">#{i + 1}</th>
                             <td>{material.name}</td>
                             <td>{material.name}</td>
                             <td>{material.description}</td>
