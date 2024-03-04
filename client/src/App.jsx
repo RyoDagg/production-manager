@@ -3,22 +3,26 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './components/Navbar';
 import Materials from './components/material';
-import Add from './components/material/Add';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import { createContext } from 'react';
+
+export const globalContext = createContext(null);
+
 
 function App() {
 
+  const navigateTo = useNavigate()
+
   return (
-    <>
+    <globalContext.Provider value={{ navigateTo }}>
       <Navbar />
       <div className="container-fluid mt-5">
         <Routes>
           <Route path='/' element={<h1>Home</h1>} />
-          <Route path='/materials' element={<Materials />} />
-          <Route path='/materials/add' element={<Add />} />
+          <Route path='/materials/*' element={<Materials />} />
         </Routes>
       </div>
-    </>
+    </globalContext.Provider>
   )
 }
 

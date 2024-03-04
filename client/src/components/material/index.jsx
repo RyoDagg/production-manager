@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
+import { Routes, Route } from 'react-router-dom';
 import axios from 'axios'
-import { useNavigate } from "react-router-dom"
+import Add from './Add';
+import Table from "./Table";
+
 
 const Materials = () => {
 
     const [materials, setMaterials] = useState([])
 
-    const navigateTo = useNavigate()
 
     useEffect(() => {
         fetchMaterials()
@@ -23,42 +25,12 @@ const Materials = () => {
     }
 
     return (
-        <div>
-
-            <button
-                onClick={() => navigateTo('/materials/add')}
-                className="btn btn-lg btn-success m-4"
-            >
-                Add New Material
-            </button>
-
-            <table className="table border">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col"></th>
-                        <th scope="col">Name</th>
-                        <th scope="col" style={{ "width": '50%' }}>Description</th>
-                        <th scope="col">Unit</th>
-                        <th scope="col">Stock</th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody className="table-group-divider">
-                    {materials.map((material, i) =>
-                        <tr key={i}>
-                            <th scope="row">{i}</th>
-                            <td>{material.name}</td>
-                            <td>{material.name}</td>
-                            <td>{material.description}</td>
-                            <td>{material.unit}</td>
-                            <td>{material.stock}</td>
-                            <td>❌ ✅ 🛒</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-        </div>
+        <>
+            <Routes>
+                <Route path='/' element={<Table {...{ materials }} />} />
+                <Route path='/add' element={<Add />} />
+            </Routes>
+        </>
     )
 }
 
