@@ -18,7 +18,7 @@ I have created files & commands to generate (synchronize and populate/seed the d
 4. Seed database using:
 
 ```bash
->_ npm run sync:db
+>_ npm run seed:db
 ```
 
 ##
