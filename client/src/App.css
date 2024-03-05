@@ -5,12 +5,17 @@
   --secondary: #ff7766;
   --contrast: #f8e9a7;
 }
+@font-face {
+  font-family: Dosis;
+  src: url(./assets/Dosis.ttf);
+}
 #root {
   margin: 0 auto;
   padding: 10px;
 }
 
 body {
+  font-family: Dosis;
   background-color: #e6e6e6;
 }
 
@@ -40,5 +45,5 @@ body {
   color: var(--primary-dark);
   margin: 0 5px;
   font-size: 17px;
-  font-weight: bold;
+  font-weight: 540;
 }
