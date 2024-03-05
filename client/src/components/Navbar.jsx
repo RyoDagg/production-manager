@@ -29,7 +29,11 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Productions</a>
+                            <a
+                                onClick={() => { navigateTo('/productions') }}
+                                className="nav-link"
+                                href="#"
+                            >Productions</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Sales</a>

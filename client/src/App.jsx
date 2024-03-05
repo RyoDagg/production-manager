@@ -6,6 +6,7 @@ import Materials from './components/material';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { createContext } from 'react';
 import Products from './components/product';
+import Productions from './components/production';
 
 export const globalContext = createContext(null);
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<h1>Home</h1>} />
           <Route path='/materials/*' element={<Materials />} />
           <Route path='/products/*' element={<Products />} />
+          <Route path='/productions/*' element={<Productions />} />
         </Routes>
       </div>
     </globalContext.Provider>
