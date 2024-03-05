@@ -28,14 +28,10 @@ const Productions = () => {
     }
 
     const addProduction = async (production) => {
-        production.materials = production.materials.map(
-            ({ material, quantity }) => ({ id: material.id, quantity })
-        )
-        console.log(production);
-        // return;
+        
         try {
             await axios.post('http://127.0.0.1:3000/api/production', production)
-            navigateTo('/products')
+            navigateTo('/productions')
             setDummy([!dummy])
         } catch (error) {
             console.log('Error adding materials', error);

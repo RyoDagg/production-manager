@@ -71,7 +71,7 @@ const Add = ({ submit }) => {
                     <label className="col-4 col-form-label">Quantity</label>
                     <div className="col-sm-5">
                         <input
-                        min={0}
+                            min={0}
                             placeholder="Stock"
                             type="number"
                             onChange={(event) => {
@@ -124,7 +124,7 @@ const Add = ({ submit }) => {
                         disabled={!valid}
                         onClick={() => {
                             if (valid) {
-                                submit({ quantity, productId })
+                                submit({ quantity, ProductId: productId })
                             } else { alert('Production Parameters Invalid ❌') }
                         }}
                         className="btn btn-success">

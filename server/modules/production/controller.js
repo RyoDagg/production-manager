@@ -1,9 +1,15 @@
+const { Op } = require("sequelize");
 const Production = require("./model");
 const Product = require("../product/model");
 
 const getAll = async (req, res) => {
   try {
     const productions = await Production.findAll({
+      where: {
+        ProductId: {
+          [Op.ne]: null,
+        },
+      },
       include: [
         {
           model: Product,
