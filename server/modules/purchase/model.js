@@ -13,7 +13,7 @@ const Purchase = sequelize.define(
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
-    client: {
+    supplier: {
       type: DataTypes.STRING,
       allowNull: true,
     },
