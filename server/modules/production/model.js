@@ -14,7 +14,10 @@ const Production = sequelize.define(
     timestamps: true,
   }
 );
-Production.belongsTo(Product);
+Production.belongsTo(Product, {
+  foreignKey: { allowNull: false },
+  onDelete: "cascade",
+});
 Product.hasMany(Production);
 
 module.exports = Production;
