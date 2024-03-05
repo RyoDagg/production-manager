@@ -1,8 +1,5 @@
-// import sequelize connection
-const db = require("./index");
-const Product = require("../modules/product/model");
-
 // import sequelize models
+const Product = require("../modules/product/model");
 const Material = require("../modules/material/model");
 const ProductMaterial = require("../modules/productMaterial/model");
 const Production = require("../modules/production/model");
