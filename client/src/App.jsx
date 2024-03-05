@@ -1,5 +1,3 @@
-// import { useState } from 'react'
-// import './App.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './components/Navbar';
 import Materials from './components/material';
@@ -9,6 +7,7 @@ import Products from './components/product';
 import Productions from './components/production';
 import Purchases from './components/purchase';
 import Sale from './components/sale';
+import './App.css'
 
 export const globalContext = createContext(null);
 

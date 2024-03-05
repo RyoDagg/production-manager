@@ -5,7 +5,7 @@ const Navbar = () => {
     const { navigateTo } = useContext(globalContext)
     return (
         <div>
-            <nav className="navbar bg-success shadow navbar-expand-lg">
+            <nav className="navbar shadow navbar-expand-lg">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">Production Manager</a>
 
