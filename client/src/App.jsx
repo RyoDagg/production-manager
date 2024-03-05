@@ -7,6 +7,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { createContext } from 'react';
 import Products from './components/product';
 import Productions from './components/production';
+import Purchases from './components/purchase';
 
 export const globalContext = createContext(null);
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/materials/*' element={<Materials />} />
           <Route path='/products/*' element={<Products />} />
           <Route path='/productions/*' element={<Productions />} />
+          <Route path='/purchases/*' element={<Purchases />} />
         </Routes>
       </div>
     </globalContext.Provider>
