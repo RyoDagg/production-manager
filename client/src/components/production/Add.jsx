@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Add = ({ submit }) => {
     const [products, setProducts] = useState([])
-    const [materials, setMaterials] = useState([])
+    const [materials, setMaterials] = useState(null)
     const [productId, setProductId] = useState(null)
     const [quantity, setQuantity] = useState(0)
     const [valid, setValid] = useState(false)
@@ -30,7 +30,6 @@ const Add = ({ submit }) => {
     }
 
     useEffect(() => {
-
         if (materials) {
             let isValid = true
             materials.forEach(({ stock, pivot }) => {
@@ -72,6 +71,7 @@ const Add = ({ submit }) => {
                     <label className="col-4 col-form-label">Quantity</label>
                     <div className="col-sm-5">
                         <input
+                        min={0}
                             placeholder="Stock"
                             type="number"
                             onChange={(event) => {
@@ -122,7 +122,11 @@ const Add = ({ submit }) => {
                 <div className="mb-3 text-right">
                     <button
                         disabled={!valid}
-                        onClick={() => submit({ quantity, productId })}
+                        onClick={() => {
+                            if (valid) {
+                                submit({ quantity, productId })
+                            } else { alert('Production Parameters Invalid ❌') }
+                        }}
                         className="btn btn-success">
                         Submit
                     </button>
