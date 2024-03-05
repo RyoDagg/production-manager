@@ -7,10 +7,10 @@ const Table = ({ productions }) => {
         <div>
 
             <button
-                onClick={() => navigateTo('/products/add')}
+                onClick={() => navigateTo('/productions/add')}
                 className="btn btn-lg btn-success m-4"
             >
-                Launch New Product
+                Launch New Production
             </button>
 
             <table className="table border">
