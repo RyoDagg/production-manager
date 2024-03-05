@@ -2,65 +2,40 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 
 const Add = ({ submit }) => {
-    const [products, setProducts] = useState([])
-    const [materials, setMaterials] = useState(null)
-    const [productId, setProductId] = useState(null)
+    const [materials, setMaterials] = useState([])
+    const [materialId, setMaterialId] = useState(null)
     const [quantity, setQuantity] = useState(0)
-    const [valid, setValid] = useState(false)
+    const [unitPrice, setUnitPrice] = useState(0)
+    const [supplier, setSupplier] = useState('')
 
-    useEffect(() => { fetchSelectProds() }, [])
+    useEffect(() => { fetchSelectMats() }, [])
 
     // fetch materials for select input 
-    const fetchSelectProds = async () => {
+    const fetchSelectMats = async () => {
         try {
-            const { data } = await axios('http://127.0.0.1:3000/api/product/select')
-            setProducts(data)
+            const { data } = await axios('http://127.0.0.1:3000/api/material/select')
+            setMaterials(data)
         } catch (error) {
             console.log('Error fetching materials!!', error);
         }
     }
 
-    const evaluateProduction = async () => {
-        try {
-            const { data } = await axios('http://127.0.0.1:3000/api/product/' + productId)
-            setMaterials(data.Materials)
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-    useEffect(() => {
-        if (materials) {
-            let isValid = true
-            materials.forEach(({ stock, pivot }) => {
-                if (pivot.quantity * quantity > stock) {
-                    isValid = false
-                }
-            })
-            setValid(isValid)
-        } else {
-            setValid(false)
-        }
-    }, [quantity, materials])
-
     return (
         <div className="row pt-3 border text-center">
-            <h3 className="text-primary mt-2 mb-5">Add new Production</h3>
+            <h3 className="text-primary mt-2 mb-5">Record New Purchase</h3>
             <div className="col-6 mx-auto">
                 <div className="mb-3 row">
-                    <label className="col-4 col-form-label">Product</label>
+                    <label className="col-4 col-form-label">Material</label>
                     <div className="col-sm-8">
                         <select
                             placeholder="Material"
                             onChange={(event) => {
-                                setValid(false)
-                                setMaterials(null)
-                                setProductId(event.target.value)
+                                setMaterialId(event.target.value)
 
                             }}
                             className="form-control" >
                             <option value={null}>...</option>
-                            {products.map(({ name, id }, i) =>
+                            {materials.map(({ name, id }, i) =>
                                 <option key={i} value={id}>{`${name}`}</option>
 
                             )}
@@ -68,65 +43,50 @@ const Add = ({ submit }) => {
                     </div>
                 </div>
                 <div className="mb-3 row">
-                    <label className="col-4 col-form-label">Quantity</label>
-                    <div className="col-sm-5">
+                    <label className="col-4 col-form-label">Quantity & Price</label>
+                    <div className="col-sm-4">
                         <input
                             min={0}
-                            placeholder="Stock"
+                            placeholder="Quantity"
                             type="number"
                             onChange={(event) => {
-                                setValid(false)
                                 setQuantity(event.target.value)
                             }}
                             className="form-control" />
                     </div>
-                    <div className="col-sm-3">
-                        <button
-                            onClick={evaluateProduction}
-                            className="btn btn-primary">
-                            Validate!
-                        </button>
+                    <div className="col-sm-4">
+                        <input
+                            min={0}
+                            placeholder="Unit Price"
+                            type="number"
+                            onChange={(event) => {
+                                setUnitPrice(event.target.value)
+                            }}
+                            className="form-control" />
                     </div>
                 </div>
                 <div className="mb-3 row">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Material</th>
-                                <th>Cost Per Unit</th>
-                                <th>Total Cost</th>
-                                <th>Stock</th>
-                            </tr>
-                        </thead>
-                        <tbody className="fw-meduim">
-                            {materials ?
-                                materials.map(({ name, unit, stock, pivot }, i) => (
-                                    < tr key={i}
-                                        className=
-                                        {pivot.quantity * quantity > stock ?
-                                            'text-danger bg-danger-light' :
-                                            ''
-                                        }
-                                    >
-                                        <td>{name}</td>
-                                        <td>{pivot.quantity}</td>
-                                        <td>{`${pivot.quantity * quantity}${unit}`}</td>
-                                        <td>{`${stock}${unit}`}</td>
-                                    </tr>
-                                )) :
-                                <></>
-                            }
-                        </tbody>
-                    </table>
+                    <label className="col-4 col-form-label">Supplier</label>
+
+                    <div className="col-sm-8">
+                        <input
+                            placeholder="Supplier"
+                            onChange={(event) => {
+                                setSupplier(event.target.value)
+                            }}
+                            className="form-control" />
+                    </div>
+                </div>
+                <div className="mb-3 row">
+                    <label className="col-5 col-form-label"><h4>Total Price</h4></label>
+
+                    <div className="col-sm-3">
+                        <h3 className="text-primary">{quantity * unitPrice}TND</h3>
+                    </div>
                 </div>
                 <div className="mb-3 text-right">
                     <button
-                        disabled={!valid}
-                        onClick={() => {
-                            if (valid) {
-                                submit({ quantity, ProductId: productId })
-                            } else { alert('Production Parameters Invalid ❌') }
-                        }}
+                        onClick={() => submit({ MaterialId: materialId, quantity, unitPrice, supplier })}
                         className="btn btn-success">
                         Submit
                     </button>
