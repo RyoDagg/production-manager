@@ -6,6 +6,7 @@ const { server } = require("config");
 const productRouter = require("./modules/product/route");
 const materialRouter = require("./modules/material/route");
 const productionRouter = require("./modules/production/route");
+const purchaseRouter = require("./modules/purchase/route");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use("/api/product", productRouter);
 app.use("/api/material", materialRouter);
 app.use("/api/production", productionRouter);
+app.use("/api/purchase", purchaseRouter);
 
 app.listen(server.PORT, () => {
   console.log(`App served on port ${server.PORT}`);
