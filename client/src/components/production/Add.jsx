@@ -6,6 +6,7 @@ const Add = ({ submit }) => {
     const [materials, setMaterials] = useState([])
     const [productId, setProductId] = useState(null)
     const [quantity, setQuantity] = useState(0)
+    const [valid, setValid] = useState(false)
 
     useEffect(() => { fetchSelectProds() }, [])
 
@@ -19,16 +20,29 @@ const Add = ({ submit }) => {
         }
     }
 
-    const validateProduction = async () => {
+    const evaluateProduction = async () => {
         try {
             const { data } = await axios('http://127.0.0.1:3000/api/product/' + productId)
             setMaterials(data.Materials)
-
         } catch (error) {
             console.log(error);
         }
     }
 
+    useEffect(() => {
+
+        if (materials) {
+            let isValid = true
+            materials.forEach(({ stock, pivot }) => {
+                if (pivot.quantity * quantity > stock) {
+                    isValid = false
+                }
+            })
+            setValid(isValid)
+        } else {
+            setValid(false)
+        }
+    }, [quantity, materials])
 
     return (
         <div className="row pt-3 border text-center">
@@ -40,8 +54,10 @@ const Add = ({ submit }) => {
                         <select
                             placeholder="Material"
                             onChange={(event) => {
-                                setProductId(event.target.value)
+                                setValid(false)
                                 setMaterials(null)
+                                setProductId(event.target.value)
+
                             }}
                             className="form-control" >
                             <option value={null}>...</option>
@@ -58,12 +74,15 @@ const Add = ({ submit }) => {
                         <input
                             placeholder="Stock"
                             type="number"
-                            onChange={(event) => setQuantity(event.target.value)}
+                            onChange={(event) => {
+                                setValid(false)
+                                setQuantity(event.target.value)
+                            }}
                             className="form-control" />
                     </div>
                     <div className="col-sm-3">
                         <button
-                            onClick={validateProduction}
+                            onClick={evaluateProduction}
                             className="btn btn-primary">
                             Validate!
                         </button>
@@ -102,6 +121,7 @@ const Add = ({ submit }) => {
                 </div>
                 <div className="mb-3 text-right">
                     <button
+                        disabled={!valid}
                         onClick={() => submit({ quantity, productId })}
                         className="btn btn-success">
                         Submit
