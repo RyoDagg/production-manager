@@ -1,10 +1,9 @@
 const db = require("./index");
 const Product = require("../modules/product/model");
 const Material = require("../modules/material/model");
-// const MaterialProduct = require("../modules/productMaterial/model");
+const ProductMaterial = require("../modules/productMaterial/model");
 const materials = require("../data/materials.json");
 const products = require("../data/products.json");
-const ProductMaterial = require("../modules/productMaterial/model");
 
 (async () => {
   try {
