@@ -26,7 +26,7 @@ const getOne = async (req, res) => {
       include: [
         {
           model: Material,
-          attributes: ["name", "unit"],
+          attributes: ["name", "unit", "stock"],
           through: { attributes: ["quantity"], as: "pivot" },
         },
       ],
