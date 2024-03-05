@@ -15,4 +15,5 @@ const ProductMaterial = sequelize.define(
 
 Material.belongsToMany(Product, { through: ProductMaterial });
 Product.belongsToMany(Material, { through: ProductMaterial });
+
 module.exports = ProductMaterial;

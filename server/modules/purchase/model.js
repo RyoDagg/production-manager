@@ -22,10 +22,12 @@ const Purchase = sequelize.define(
     timestamps: true,
   }
 );
+
 Purchase.belongsTo(Material, {
   foreignKey: { allowNull: false },
   onDelete: "cascade",
 });
+
 Material.hasMany(Purchase);
 
 module.exports = Purchase;

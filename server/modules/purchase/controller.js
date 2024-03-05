@@ -1,5 +1,5 @@
-const Material = require("../material/model");
 const Purchase = require("./model");
+const Material = require("../material/model");
 
 const getAll = async (req, res) => {
   try {

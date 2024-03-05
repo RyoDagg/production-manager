@@ -22,10 +22,12 @@ const Sale = sequelize.define(
     timestamps: true,
   }
 );
+
 Sale.belongsTo(Product, {
   foreignKey: { allowNull: false },
   onDelete: "cascade",
 });
+
 Product.hasMany(Sale);
 
 module.exports = Sale;
