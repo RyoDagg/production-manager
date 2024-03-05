@@ -10,7 +10,11 @@ module.exports = sequelize.define(
     },
     description: DataTypes.STRING,
     image: DataTypes.TEXT,
-    unit: DataTypes.STRING,
+    unit: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "*",
+    },
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
