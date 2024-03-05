@@ -4,6 +4,8 @@ const Material = require("../modules/material/model");
 const MaterialProduct = require("../modules/productMaterial/model");
 const Production = require("../modules/production/model");
 const Purchase = require("../modules/purchase/model");
+const Sale = require("../modules/sale/model");
+
 
 
 (async () => {
