@@ -1,11 +1,9 @@
 const router = require("express").Router();
 const productController = require("./controller");
 
-router.route("/")
-    .get(productController.getAll)
-    .post(productController.create);
+router.route("/").get(productController.getAll).post(productController.create);
 
-    router.route("/materials")
-    .post(productController.createWithMats);
+router.post("/materials", productController.createWithMats);
+router.get("/select", productController.getNames);
 
 module.exports = router;

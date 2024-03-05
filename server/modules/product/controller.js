@@ -47,4 +47,15 @@ const createWithMats = async (req, res) => {
   }
 };
 
-module.exports = { getAll, create, createWithMats };
+const getNames = async (req, res) => {
+  try {
+    const products = await Product.findAll({
+      attributes: ["id", "name"],
+    });
+    res.json(products);
+  } catch (error) {
+    res.status(404).send(error);
+  }
+};
+
+module.exports = { getAll, create, createWithMats, getNames };
