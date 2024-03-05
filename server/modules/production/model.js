@@ -2,17 +2,18 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("../../database");
 const Product = require("../product/model");
 
-sequelize
-  .define(
-    "Production",
-    {
-      quantity: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
+const Production = sequelize.define(
+  "Production",
+  {
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
-    {
-      timestamps: true,
-    }
-  )
-  .belongsTo(Product);
+  },
+  {
+    timestamps: true,
+  }
+);
+Production.belongsTo(Product);
+
+module.exports = Production;
