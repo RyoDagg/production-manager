@@ -117,7 +117,7 @@ const Add = ({ submit }) => {
                 </div>
                 <div className="mb-3 text-right">
                     <button
-                        onClick={() => submit({ name, description, image, stock, productMats })}
+                        onClick={() => submit({ name, description, image, stock, materials: productMats })}
                         className="btn btn-success">Submit</button>
                 </div>
             </div>

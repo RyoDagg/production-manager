@@ -9,12 +9,13 @@ import { globalContext } from "../../App";
 const Products = () => {
 
     const [products, setProducts] = useState([])
+    const [dummy, setDummy] = useState(false)
     const { navigateTo } = useContext(globalContext)
 
 
     useEffect(() => {
         fetchMaterials()
-    }, []);
+    }, [dummy]);
 
     const fetchMaterials = async () => {
         try {
@@ -27,10 +28,15 @@ const Products = () => {
     }
 
     const addProduct = async (product) => {
+        product.materials = product.materials.map(
+            ({ material, quantity }) => ({ id: material.id, quantity })
+        )
+        console.log(product);
+        // return;
         try {
-            const { data } = await axios.post('http://127.0.0.1:3000/api/product', product)
+            await axios.post('http://127.0.0.1:3000/api/product/materials', product)
             navigateTo('/products')
-            setProducts([data, ...products])
+            setDummy([!dummy])
         } catch (error) {
             console.log('Error adding materials', error);
         }
