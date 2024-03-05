@@ -7,18 +7,34 @@ const Add = ({ submit }) => {
     const [quantity, setQuantity] = useState(0)
     const [unitPrice, setUnitPrice] = useState(0)
     const [client, setClient] = useState('')
+    const [valid, setValid] = useState(false)
+    const [stocks, setStocks] = useState({})
 
-    useEffect(() => { fetchSelectMats() }, [])
+    useEffect(() => { fetchSelectProds() }, [])
 
     // fetch products for select input 
-    const fetchSelectMats = async () => {
+    const fetchSelectProds = async () => {
         try {
             const { data } = await axios('http://127.0.0.1:3000/api/product/select')
             setProducts(data)
+            const stockIds = {};
+
+            data.forEach(({ id, stock }) => {
+                stockIds[id] = stock
+            });
+            setStocks(stockIds)
         } catch (error) {
             console.log('Error fetching products!!', error);
         }
     }
+
+    useEffect(() => {
+        if (productId) {
+            setValid(quantity <= stocks[productId])
+        } else {
+            setValid(false)
+        }
+    }, [quantity, productId])
 
     return (
         <div className="row pt-3 border text-center">
@@ -31,12 +47,11 @@ const Add = ({ submit }) => {
                             placeholder="Material"
                             onChange={(event) => {
                                 setProductId(event.target.value)
-
                             }}
                             className="form-control" >
                             <option value={null}>...</option>
-                            {products.map(({ name, id }, i) =>
-                                <option key={i} value={id}>{`${name}`}</option>
+                            {products.map(({ name, id, stock }, i) =>
+                                <option key={i} value={id}>{`${name} (${stock})`}</option>
 
                             )}
                         </select>
@@ -86,6 +101,7 @@ const Add = ({ submit }) => {
                 </div>
                 <div className="mb-3 text-right">
                     <button
+                        disabled={!valid}
                         onClick={() => submit({ ProductId: productId, quantity, unitPrice, client })}
                         className="btn btn-success">
                         Submit
