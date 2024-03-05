@@ -14,42 +14,41 @@ const productions = require("../data/productions.json");
 
 // seed Materials
 (async () => {
-  try {
-    await Material.destroy({ truncate: { cascade: true } });
-    await Material.bulkCreate(materials);
-    console.log("Materials seeded successfully!!");
-  } catch (error) {
-    console.log("Materials seeding Error!!", error);
-  }
-})();
+  await (async () => {
+    try {
+      await Material.bulkCreate(materials);
+      console.log("Materials seeded successfully!!");
+    } catch (error) {
+      console.log("Materials seeding Error!!", error);
+    }
+  })();
 
-// seed Products with respective join materials
-(async () => {
-  try {
-    await Product.destroy({ truncate: { cascade: true } });
-    const createdProducts = await Product.bulkCreate(products);
-    products.forEach(({ materials }, i) => {
-      materials.forEach(({ id, quantity }) => {
-        ProductMaterial.create({
-          ProductId: createdProducts[i].id,
-          MaterialId: id,
-          quantity,
+  // seed Products with respective join materials
+  await (async () => {
+    try {
+      const createdProducts = await Product.bulkCreate(products);
+      products.forEach(({ materials }, i) => {
+        materials.forEach(({ id, quantity }) => {
+          ProductMaterial.create({
+            ProductId: createdProducts[i].id,
+            MaterialId: id,
+            quantity,
+          });
         });
       });
-    });
-    console.log("Products seeded successfully!!");
-  } catch (error) {
-    console.log("Products seeding Error!!", error);
-  }
-})();
+      console.log("Products seeded successfully!!");
+    } catch (error) {
+      console.log("Products seeding Error!!", error);
+    }
+  })();
 
-// seed Productions
-(async () => {
-  try {
-    await Production.destroy({ truncate: { cascade: true } });
-    await Production.bulkCreate(productions);
-    console.log("Productions seeded successfully!!");
-  } catch (error) {
-    console.log("Productions seeding Error!!", error);
-  }
+  // seed Productions
+  await (async () => {
+    try {
+      await Production.bulkCreate(productions);
+      console.log("Productions seeded successfully!!");
+    } catch (error) {
+      console.log("Productions seeding Error!!", error);
+    }
+  })();
 })();
