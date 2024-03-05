@@ -68,7 +68,7 @@ const createWithMats = async (req, res) => {
 const getNames = async (req, res) => {
   try {
     const products = await Product.findAll({
-      attributes: ["id", "name"],
+      attributes: ["id", "name", "stock"],
     });
     res.json(products);
   } catch (error) {
