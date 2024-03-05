@@ -9,6 +9,14 @@ const Purchase = sequelize.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    unitPrice: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    client: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
   {
     timestamps: true,
