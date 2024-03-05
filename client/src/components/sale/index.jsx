@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Routes, Route } from 'react-router-dom';
 import axios from 'axios'
-// import Add from './Add';
+import Add from './Add';
 import Table from "./Table";
 import { globalContext } from "../../App";
 
@@ -27,21 +27,21 @@ const Sale = () => {
         }
     }
 
-    // const addSale = async (sale) => {
-    //     try {
-    //         await axios.post('http://127.0.0.1:3000/api/sale', sale)
-    //         navigateTo('/purchases')
-    //         setDummy([!dummy])
-    //     } catch (error) {
-    //         console.log('Error adding Sale', error);
-    //     }
-    // }
+    const addSale = async (sale) => {
+        try {
+            await axios.post('http://127.0.0.1:3000/api/sale', sale)
+            navigateTo('/sales')
+            setDummy([!dummy])
+        } catch (error) {
+            console.log('Error adding Sale', error);
+        }
+    }
 
     return (
         <>
             <Routes>
                 <Route path='/' element={<Table {...{ sales }} />} />
-                {/* <Route path='/add' element={<Add submit={addSale} />} /> */}
+                <Route path='/add' element={<Add submit={addSale} />} />
             </Routes>
         </>
     )
