@@ -3,7 +3,8 @@ import axios from 'axios'
 
 const Add = ({ submit }) => {
     const [products, setProducts] = useState([])
-    const [product, setProduct] = useState(null)
+    const [materials, setMaterials] = useState([])
+    const [productId, setProductId] = useState(null)
     const [quantity, setQuantity] = useState(0)
 
     useEffect(() => { fetchSelectProds() }, [])
@@ -18,6 +19,16 @@ const Add = ({ submit }) => {
         }
     }
 
+    const validateProduction = async () => {
+        try {
+            const { data } = await axios('http://127.0.0.1:3000/api/product/' + productId)
+            setMaterials(data.Materials)
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 
     return (
         <div className="row pt-3 border text-center">
@@ -28,7 +39,10 @@ const Add = ({ submit }) => {
                     <div className="col-sm-8">
                         <select
                             placeholder="Material"
-                            onChange={(event) => setProduct(event.target.value)}
+                            onChange={(event) => {
+                                setProductId(event.target.value)
+                                setMaterials(null)
+                            }}
                             className="form-control" >
                             <option value={null}>...</option>
                             {products.map(({ name, id }, i) =>
@@ -49,21 +63,52 @@ const Add = ({ submit }) => {
                     </div>
                     <div className="col-sm-3">
                         <button
-                            onClick={null}
+                            onClick={validateProduction}
                             className="btn btn-primary">
                             Validate!
                         </button>
                     </div>
                 </div>
+                <div className="mb-3 row">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Cost Per Unit</th>
+                                <th>Total Cost</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody className="fw-meduim">
+                            {materials ?
+                                materials.map(({ name, unit, stock, pivot }, i) => (
+                                    < tr key={i}
+                                        className=
+                                        {pivot.quantity * quantity > stock ?
+                                            'text-danger bg-danger-light' :
+                                            ''
+                                        }
+                                    >
+                                        <td>{name}</td>
+                                        <td>{pivot.quantity}</td>
+                                        <td>{`${pivot.quantity * quantity}${unit}`}</td>
+                                        <td>{`${stock}${unit}`}</td>
+                                    </tr>
+                                )) :
+                                <></>
+                            }
+                        </tbody>
+                    </table>
+                </div>
                 <div className="mb-3 text-right">
                     <button
-                        onClick={() => submit({ quantity, product })}
+                        onClick={() => submit({ quantity, productId })}
                         className="btn btn-success">
                         Submit
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
