@@ -19,6 +19,24 @@ const getAll = async (req, res) => {
   }
 };
 
+const getOne = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Product.findByPk(id, {
+      include: [
+        {
+          model: Material,
+          attributes: ["name", "unit"],
+          through: { attributes: ["quantity"], as: "pivot" },
+        },
+      ],
+    });
+    res.json(product);
+  } catch (error) {
+    res.status(404).send(error);
+  }
+};
+
 const create = async (req, res) => {
   try {
     console.log(req.body);
@@ -58,4 +76,10 @@ const getNames = async (req, res) => {
   }
 };
 
-module.exports = { getAll, create, createWithMats, getNames };
+module.exports = {
+  getAll,
+  create,
+  createWithMats,
+  getNames,
+  getOne,
+};
