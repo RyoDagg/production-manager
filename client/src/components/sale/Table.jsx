@@ -43,7 +43,7 @@ const Table = ({ sales }) => {
                             <td>{sale.Product.name}</td>
                             <td>{sale.unitPrice}TND</td>
                             <td>{sale.quantity}</td>
-                            <td>{sale.supplier}</td>
+                            <td>{sale.client}</td>
                             <td>{sale.quantity * sale.unitPrice}TND</td>
                             <td>❌ ✅ 🛒</td>
                         </tr>
