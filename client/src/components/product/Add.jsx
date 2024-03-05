@@ -6,11 +6,10 @@ const Add = ({ submit }) => {
     const [description, setDescription] = useState()
     const [image, setImage] = useState()
     const [stock, setStock] = useState()
-    // const [material, setMaterial] = useState()
-    // const [quantity, setQuantity] = useState()
+    const [materialIndex, setMaterialIndex] = useState(-1)
+    const [quantity, setQuantity] = useState(0)
     const [materials, setMaterials] = useState([])
-    // const [productMats, setProdMats] = useState([])
-    
+    const [productMats, setProdMats] = useState([])
 
     useEffect(() => { fetchSelectMats() }, [])
 
@@ -22,6 +21,19 @@ const Add = ({ submit }) => {
         } catch (error) {
             console.log('Error fetching materials!!', error);
         }
+    }
+
+    // productMaterials to state
+    const addMaterial = (index, quantity) => {
+        setProdMats([
+            {
+                material: materials[index],
+                quantity
+            },
+            ...productMats])
+
+        setMaterialIndex(-1)
+        setQuantity(0)
     }
 
     return (
@@ -65,33 +77,47 @@ const Add = ({ submit }) => {
                 </div>
                 <div className="mb-3 row">
                     <label className="col-4 col-form-label">Material</label>
-                    <div className="col-sm-3">
+                    <div className="col-sm-4">
                         <select
+                            value={materialIndex}
                             placeholder="Material"
-                            onChange={(event) => setStock(event.target.value)}
+                            onChange={(event) => setMaterialIndex(event.target.value)}
                             className="form-control" >
-                            <option value={null}>...</option>
-                            {materials.map(({ id, name }, i) =>
-                                <option key={i} value={id}>{name}</option>
+                            <option value={-1}>...</option>
+                            {materials.map(({ name, unit }, i) =>
+                                <option key={i} value={i}>{`${name} (${unit})`}</option>
 
                             )}
                         </select>
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-sm-2">
                         <input
+                            value={quantity}
                             placeholder="Quantity"
-                            onChange={(event) => setStock(event.target.value)}
+                            type="number"
+                            onChange={(event) => setQuantity(event.target.value)}
                             className="form-control" />
                     </div>
                     <div className="col-sm-2">
                         <button
-                            onClick={() => submit({ name, description, image, stock })}
+                            onClick={() => addMaterial(materialIndex, quantity)}
                             className="btn btn-success">Add</button>
+                    </div>
+                    <div className="col8">
+                        {productMats.map(({ material, quantity }, i) => (
+                            <div
+                                key={i}
+                                className="badge bg-primary m-1">
+                                <h6>
+                                    {`${material.name}: ${quantity}${material.unit}`}
+                                </h6>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className="mb-3 text-right">
                     <button
-                        onClick={() => submit({ name, description, image, stock })}
+                        onClick={() => submit({ name, description, image, stock, productMats })}
                         className="btn btn-success">Submit</button>
                 </div>
             </div>
