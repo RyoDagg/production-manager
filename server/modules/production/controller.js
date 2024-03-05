@@ -24,8 +24,23 @@ const getAll = async (req, res) => {
 
 const create = async (req, res) => {
   try {
-    console.log(req.body);
-    const production = await Production.create(req.body);
+    const { quantity, ProductId } = req.body;
+
+    const production = await Production.create({ quantity, ProductId });
+
+    //todo: Update Product Stock
+    const product = await Product.findByPk(ProductId);
+
+    product.stock += +quantity;
+    product.save();
+
+    //todo: Update Related Materials Stock
+    const materials = await product.getMaterials();
+    materials.forEach((mat) => {
+      mat.stock -= mat.ProductMaterial.quantity * quantity;
+      mat.save();
+    });
+
     res.status(201).json(production);
   } catch (error) {
     res.status(409).send(error);
