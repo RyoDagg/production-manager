@@ -2,6 +2,7 @@ const db = require("./index");
 const Product = require("../modules/product/model");
 const Material = require("../modules/material/model");
 const MaterialProduct = require("../modules/productMaterial/model");
+const Production = require("../modules/production/model");
 (async () => {
   try {
     await db.sync({ force: true });
