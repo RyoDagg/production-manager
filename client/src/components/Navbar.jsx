@@ -37,14 +37,17 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <a
-                                onClick={() => { navigateTo('/purchases') }}
+                                onClick={() => { navigateTo('/sales') }}
                                 className="nav-link"
                                 href="#">
                                 Sales
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Purchases</a>
+                            <a
+                                onClick={() => { navigateTo('/purchases') }}
+                                className="nav-link"
+                                href="#">Purchases</a>
                         </li>
                     </ul>
                 </div>
