@@ -8,6 +8,7 @@ import { createContext } from 'react';
 import Products from './components/product';
 import Productions from './components/production';
 import Purchases from './components/purchase';
+import Sale from './components/sale';
 
 export const globalContext = createContext(null);
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/products/*' element={<Products />} />
           <Route path='/productions/*' element={<Productions />} />
           <Route path='/purchases/*' element={<Purchases />} />
+          <Route path='/sales/*' element={<Sale />} />
         </Routes>
       </div>
     </globalContext.Provider>
