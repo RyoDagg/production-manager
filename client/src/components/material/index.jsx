@@ -19,7 +19,7 @@ const Materials = () => {
     const fetchMaterials = async () => {
         try {
             const { data } = await axios('http://127.0.0.1:3000/api/material')
-            console.log(data);
+            // console.log(data);
             setMaterials(data.reverse())
         } catch (error) {
             console.log('Error fetching materials', error);
