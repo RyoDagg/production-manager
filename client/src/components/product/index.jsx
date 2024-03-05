@@ -14,10 +14,10 @@ const Products = () => {
 
 
     useEffect(() => {
-        fetchMaterials()
+        fetchProducts()
     }, [dummy]);
 
-    const fetchMaterials = async () => {
+    const fetchProducts = async () => {
         try {
             const { data } = await axios('http://127.0.0.1:3000/api/product')
             console.log(data);
