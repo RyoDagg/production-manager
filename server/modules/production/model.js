@@ -15,5 +15,6 @@ const Production = sequelize.define(
   }
 );
 Production.belongsTo(Product);
+Product.hasMany(Production);
 
 module.exports = Production;
