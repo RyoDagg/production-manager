@@ -12,7 +12,7 @@ const Navbar = () => {
         <div>
             <nav className="navbar shadow navbar-expand-lg">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">Production Manager</a>
+                    <a className="navbar-brand" href="/">WareFlow</a>
 
                     <ul className="navbar-nav me-auto ml-4 mb-2 mb-lg-0">
                         <li 

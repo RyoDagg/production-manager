@@ -51,3 +51,16 @@ body {
 .col-form-label {
   font-weight: 600;
 }
+
+.table-group-divider {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.navbar-brand {
+  font-size: 40px;
+  margin: 5px 20px;
+  font-weight: 700;
+  color: var(--primary);
+}

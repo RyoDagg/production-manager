@@ -34,7 +34,7 @@ const Table = ({ products }) => {
                                     src={product.image}
                                     alt=""
                                     className='img-thumbnail'
-                                    style={{ width: '120px' }}
+                                    style={{ width: '220px' }}
                                 />
                             </td>
                             <td>{product.name}</td>
