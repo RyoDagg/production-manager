@@ -61,7 +61,9 @@ const Add = ({ submit }) => {
                     <label className="col-4 col-form-label">Image</label>
                     <div className="col-sm-8">
                         <input
-                            onChange={(event) => setImage(event.target.value)}
+                            type="file"
+                            accept="image/png, image/jpeg"
+                            onChange={(event) => setImage(event.target.files[0])}
                             className="form-control" />
                     </div>
                 </div>

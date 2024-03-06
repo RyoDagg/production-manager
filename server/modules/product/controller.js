@@ -1,3 +1,5 @@
+const path = require("path");
+
 const Product = require("./model");
 const ProductMaterial = require("../productMaterial/model");
 const Material = require("../material/model");
@@ -49,9 +51,25 @@ const create = async (req, res) => {
 
 const createWithMats = async (req, res) => {
   try {
-    const { materials } = req.body;
-    console.log(req.body);
-    const product = await Product.create(req.body);
+    // Umage saving logic
+    const { image } = req.files;
+    const [, extension] = req.files.image.mimetype.split("/");
+
+    const imagePath = path.join(__dirname, "../../storage/images/products/");
+    const imageName = Date.now() + "." + extension;
+
+    await image.mv(imagePath + imageName);
+    const imageUrl = `${req.protocol}://${req.get("host")}`;
+    const data = {
+      ...req.body,
+      image: imageUrl + "/storage/images/products/" + imageName,
+    };
+
+    let { materials } = data;
+    materials = JSON.parse(materials);
+    console.log(materials);
+
+    const product = await Product.create(data);
     materials.forEach(async ({ id, quantity }) => {
       await ProductMaterial.create({
         ProductId: product.id,

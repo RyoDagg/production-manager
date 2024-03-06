@@ -28,13 +28,20 @@ const Products = () => {
     }
 
     const addProduct = async (product) => {
+
         product.materials = product.materials.map(
             ({ material, quantity }) => ({ id: material.id, quantity })
         )
-        console.log(product);
-        // return;
+        // console.log(product);
+
+        const formData = new FormData();
+        for (const key in product) {
+            formData.append(key, product[key]);
+        }
+        formData.set('materials', JSON.stringify(product.materials));
+
         try {
-            await axios.post('http://127.0.0.1:3000/api/product/materials', product)
+            await axios.post('http://127.0.0.1:3000/api/product/materials', formData)
             navigateTo('/products')
             setDummy([!dummy])
         } catch (error) {

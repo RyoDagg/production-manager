@@ -1,5 +1,6 @@
-const Material = require("./model");
 const path = require("path");
+
+const Material = require("./model");
 
 const getAll = async (req, res) => {
   try {
