@@ -38,6 +38,7 @@ const Add = ({ submit }) => {
 
     return (
         <div className="row pt-3 border text-center">
+            <h3 className="text-primary mt-2 mb-5">Add new Product</h3>
             <div className="col-6 mx-auto">
                 <div className="mb-3 row">
                     <label className="col-4 col-form-label">Name</label>
