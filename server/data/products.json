@@ -120,7 +120,7 @@
     "id": 12,
     "name": "Plaster Sculpture",
     "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "https://i.pinimg.com/originals/f1/ca/17/f1ca177c73726adfbf7da90e40cc1595.jpg",
     "stock": 8,
     "materials": [{ "id": 13, "quantity": 2 }]
   },
@@ -128,7 +128,7 @@
     "id": 13,
     "name": "Brass Lamp",
     "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "data:image/jpeg;base64,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",
     "stock": 22,
     "materials": [
       { "id": 10, "quantity": 0.4 },
@@ -139,7 +139,7 @@
     "id": 14,
     "name": "Rubber Doormat",
     "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "https://m.media-amazon.com/images/I/81KuLBfLTXL._AC_UF894,1000_QL80_.jpg",
     "stock": 45,
     "materials": [
       { "id": 8, "quantity": 1 },
@@ -150,7 +150,7 @@
     "id": 15,
     "name": "Aluminum Laptop Stand",
     "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "https://i5.walmartimages.com/asr/984226a1-1eba-4564-9c24-950f8f480360.5c4157f3268818d4445032abd40b14ab.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
     "stock": 28,
     "materials": [
       { "id": 3, "quantity": 0.8 },
@@ -161,7 +161,7 @@
     "id": 16,
     "name": "Executive Office Desk",
     "description": "Premium executive desk with spacious design and built-in storage.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "https://www.modernfurniture.com.au/cdn/shop/products/IMG_0426copy_1024x1024.jpg?v=1668240212",
     "stock": 50,
     "materials": [
       { "id": 16, "quantity": 8 },
@@ -173,7 +173,7 @@
     "id": 17,
     "name": "Smart Home Security System",
     "description": "State-of-the-art security system with AI-powered surveillance and automation.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "https://m.media-amazon.com/images/I/61bDb5ohttL._AC_UF894,1000_QL80_.jpg",
     "stock": 30,
     "materials": [
       { "id": 17, "quantity": 1 },
@@ -185,7 +185,7 @@
     "id": 18,
     "name": "Outdoor Lounge Chair",
     "description": "Comfortable lounge chair designed for outdoor relaxation.",
-    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "image": "https://images.thdstatic.com/productImages/59d2f1af-08a5-4458-97b1-d932c9a60a52/svn/noble-house-outdoor-lounge-chairs-6072-64_600.jpg",
     "stock": 80,
     "materials": [
       { "id": 17, "quantity": 3 },

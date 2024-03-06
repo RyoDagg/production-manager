@@ -115,7 +115,7 @@
     "id": 15,
     "name": "Silicone",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "image": "https://m.media-amazon.com/images/I/51YfXqQZd9L.jpg",
     "unit": "kg",
     "stock": 95
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "name": "High Carbon Steel",
     "description": "Durable high carbon steel suitable for industrial applications.",
-    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "image": "https://eoncoat.com/wp-content/uploads/2016/11/719x488-1.jpg",
     "unit": "kg",
     "stock": 500
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "name": "Reinforced Plastic",
     "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
-    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "image": "https://www.alformet.com/storage/media/2bd88b9b-c00e-408a-88e9-a9767702d9e4/composite-materials-technology_20210913151244830.jpg",
     "unit": "kg",
     "stock": 300
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "name": "Aircraft Grade Aluminum",
     "description": "Lightweight aluminum alloy used in aerospace engineering.",
-    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2022/12/KZ/BK/KX/147200830/aluminum-sheets-and-plates-500x500.png",
     "unit": "kg",
     "stock": 200
   },
@@ -147,7 +147,7 @@
     "id": 19,
     "name": "Tempered Glass",
     "description": "Highly durable tempered glass for electronic device screens.",
-    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "image": "https://www.fireplacedoorsonline.com/images/companies/5/images/Tempered%20Glass/temp-glass-sheets.jpg",
     "unit": "sqm",
     "stock": 100
   }
