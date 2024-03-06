@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { globalContext } from '../../App'
+import moment from 'moment';
 
 const Table = ({ sales }) => {
     const { navigateTo } = useContext(globalContext)
@@ -31,7 +32,9 @@ const Table = ({ sales }) => {
                     {sales.map((sale, i) =>
                         <tr key={i}>
                             <th scope="row">#{i + 1}</th>
-                            <td>{sale.createdAt}</td>
+                            <td>
+                                {moment(sale.createdAt).format('D/MMM/YYYY - hh:mm')}
+                            </td>
                             <td>
                                 <img
                                     src={sale.Product.image}
