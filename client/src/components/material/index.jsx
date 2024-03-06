@@ -27,8 +27,14 @@ const Materials = () => {
     }
 
     const addMaterial = async (material) => {
+        const formData = new FormData();
+        
+        for (const key in material) {
+            formData.append(key, material[key]);
+        }
+
         try {
-            const { data } = await axios.post('http://127.0.0.1:3000/api/material', material)
+            const { data } = await axios.post('http://127.0.0.1:3000/api/material', formData)
             navigateTo('/materials')
             setMaterials([data, ...materials])
         } catch (error) {
