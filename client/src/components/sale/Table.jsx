@@ -11,7 +11,7 @@ const Table = ({ sales }) => {
                 onClick={() => navigateTo('/sales/add')}
                 className="btn btn-lg btn-success m-4"
             >
-                Record New Purchses
+                Record New Sale
             </button>
 
             <table className="table border">

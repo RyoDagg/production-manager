@@ -41,7 +41,7 @@ const Add = ({ submit }) => {
             <h3 className="text-primary mt-2 mb-5">Record New Sale</h3>
             <div className="col-6 mx-auto">
                 <div className="mb-3 row">
-                    <label className="col-4 col-form-label">Material</label>
+                    <label className="col-4 col-form-label">Product</label>
                     <div className="col-sm-8">
                         <select
                             placeholder="Material"
