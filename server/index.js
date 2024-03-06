@@ -17,6 +17,7 @@ app.use(express.json());
 app.use("/api/product", productRouter);
 app.use("/api/material", materialRouter);
 app.use("/api/production", productionRouter);
+app.use("/api/purchase", purchaseRouter);
 app.use("/api/sale", saleRouter);
 
 app.listen(server.PORT, () => {
