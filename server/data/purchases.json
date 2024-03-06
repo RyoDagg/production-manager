@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "MaterialId": 3,
+    "quantity": 500,
+    "unitPrice": 2.99,
+    "supplier": "Supplier A"
+  },
+  {
+    "id": 2,
+    "MaterialId": 8,
+    "quantity": 300,
+    "unitPrice": 5.5,
+    "supplier": "Supplier B"
+  },
+  {
+    "id": 3,
+    "MaterialId": 12,
+    "quantity": 200,
+    "unitPrice": 8.75,
+    "supplier": "Supplier C"
+  },
+  {
+    "id": 4,
+    "MaterialId": 5,
+    "quantity": 700,
+    "unitPrice": 3.25,
+    "supplier": "Supplier D"
+  },
+  {
+    "id": 5,
+    "MaterialId": 10,
+    "quantity": 450,
+    "unitPrice": 6.99,
+    "supplier": "Supplier E"
+  },
+  {
+    "id": 6,
+    "MaterialId": 14,
+    "quantity": 600,
+    "unitPrice": 4.5,
+    "supplier": "Supplier F"
+  },
+  {
+    "id": 7,
+    "MaterialId": 6,
+    "quantity": 350,
+    "unitPrice": 7.25,
+    "supplier": "Supplier G"
+  },
+  {
+    "id": 8,
+    "MaterialId": 2,
+    "quantity": 900,
+    "unitPrice": 2.75,
+    "supplier": "Supplier H"
+  },
+  {
+    "id": 9,
+    "MaterialId": 7,
+    "quantity": 250,
+    "unitPrice": 4.99,
+    "supplier": "Supplier I"
+  },
+  {
+    "id": 10,
+    "MaterialId": 13,
+    "quantity": 550,
+    "unitPrice": 3.5,
+    "supplier": "Supplier J"
+  },
+  {
+    "id": 11,
+    "MaterialId": 1,
+    "quantity": 400,
+    "unitPrice": 5.99,
+    "supplier": "Supplier K"
+  },
+  {
+    "id": 12,
+    "MaterialId": 11,
+    "quantity": 750,
+    "unitPrice": 6.5,
+    "supplier": "Supplier L"
+  },
+  {
+    "id": 13,
+    "MaterialId": 4,
+    "quantity": 300,
+    "unitPrice": 8.99,
+    "supplier": "Supplier M"
+  },
+  {
+    "id": 14,
+    "MaterialId": 9,
+    "quantity": 600,
+    "unitPrice": 7.5,
+    "supplier": "Supplier N"
+  },
+  {
+    "id": 15,
+    "MaterialId": 15,
+    "quantity": 350,
+    "unitPrice": 4.25,
+    "supplier": "Supplier O"
+  }
+]

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Steel",
-    "description": "High-quality steel for structural components.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
     "unit": "kg",
     "stock": 500
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Plastic",
-    "description": "Durable plastic material for various parts.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
     "unit": "kg",
     "stock": 300
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Aluminum",
-    "description": "Lightweight aluminum for specialized components.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
     "unit": "kg",
     "stock": 200
@@ -26,25 +26,129 @@
   {
     "id": 4,
     "name": "Glass",
-    "description": "Transparent glass for display panels.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
     "unit": "sqm",
     "stock": 100
   },
   {
     "id": 5,
-    "name": "Wood",
-    "description": "High-quality wood for furniture manufacturing.",
+    "name": "Copper",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
-    "unit": "cubic meter",
+    "unit": "kg",
     "stock": 150
   },
   {
     "id": 6,
-    "name": "Copper",
-    "description": "Conductive copper for electrical components.",
+    "name": "Wood",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "cubic meter",
+    "stock": 250
+  },
+  {
+    "id": 7,
+    "name": "Fabric",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "sqm",
+    "stock": 180
+  },
+  {
+    "id": 8,
+    "name": "Rubber",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 120
+  },
+  {
+    "id": 9,
+    "name": "Carbon Fiber",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
     "unit": "kg",
     "stock": 80
+  },
+  {
+    "id": 10,
+    "name": "Brass",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 100
+  },
+  {
+    "id": 11,
+    "name": "Titanium",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 90
+  },
+  {
+    "id": 12,
+    "name": "Leather",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "sqm",
+    "stock": 130
+  },
+  {
+    "id": 13,
+    "name": "Plaster",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 70
+  },
+  {
+    "id": 14,
+    "name": "Concrete",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "cubic meter",
+    "stock": 110
+  },
+  {
+    "id": 15,
+    "name": "Silicone",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 95
+  },
+  {
+    "id": 16,
+    "name": "High Carbon Steel",
+    "description": "Durable high carbon steel suitable for industrial applications.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 500
+  },
+  {
+    "id": 17,
+    "name": "Reinforced Plastic",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 300
+  },
+  {
+    "id": 18,
+    "name": "Aircraft Grade Aluminum",
+    "description": "Lightweight aluminum alloy used in aerospace engineering.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "kg",
+    "stock": 200
+  },
+  {
+    "id": 19,
+    "name": "Tempered Glass",
+    "description": "Highly durable tempered glass for electronic device screens.",
+    "image": "https://cdn-icons-png.flaticon.com/512/747/747062.png",
+    "unit": "sqm",
+    "stock": 100
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Desk Chair",
-    "description": "Ergonomic desk chair with adjustable features.",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
     "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
     "stock": 50,
     "materials": [
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "LED Monitor",
-    "description": "High-resolution LED monitor for professional use.",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
     "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
     "stock": 30,
     "materials": [
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Plastic Chair",
-    "description": "Durable plastic chair for outdoor use.",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
     "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
     "stock": 80,
     "materials": [
@@ -37,20 +37,159 @@
   {
     "id": 4,
     "name": "Wooden Table",
-    "description": "Sturdy wooden table for dining or office use.",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
     "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
     "stock": 40,
     "materials": [
-      { "id": 1, "quantity": 2 },
-      { "id": 5, "quantity": 4 }
+      { "id": 6, "quantity": 2 },
+      { "id": 10, "quantity": 1 }
     ]
   },
   {
     "id": 5,
     "name": "Copper Wire",
-    "description": "High-quality copper wire for electrical wiring.",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 100,
+    "materials": [{ "id": 5, "quantity": 1 }]
+  },
+  {
+    "id": 6,
+    "name": "Aluminum Frame",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
     "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
     "stock": 60,
-    "materials": [{ "id": 6, "quantity": 1.5 }]
+    "materials": [
+      { "id": 3, "quantity": 1.5 },
+      { "id": 8, "quantity": 0.5 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Glass Tabletop",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 25,
+    "materials": [{ "id": 4, "quantity": 2 }]
+  },
+  {
+    "id": 8,
+    "name": "Leather Sofa",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 35,
+    "materials": [
+      { "id": 12, "quantity": 4 },
+      { "id": 7, "quantity": 2 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Concrete Planter",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 15,
+    "materials": [
+      { "id": 14, "quantity": 0.8 },
+      { "id": 6, "quantity": 0.2 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Titanium Watch",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 18,
+    "materials": [
+      { "id": 11, "quantity": 0.1 },
+      { "id": 5, "quantity": 0.5 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Silicone Phone Case",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 75,
+    "materials": [
+      { "id": 15, "quantity": 0.3 },
+      { "id": 8, "quantity": 0.1 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Plaster Sculpture",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 8,
+    "materials": [{ "id": 13, "quantity": 2 }]
+  },
+  {
+    "id": 13,
+    "name": "Brass Lamp",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 22,
+    "materials": [
+      { "id": 10, "quantity": 0.4 },
+      { "id": 5, "quantity": 0.3 }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Rubber Doormat",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 45,
+    "materials": [
+      { "id": 8, "quantity": 1 },
+      { "id": 2, "quantity": 0.2 }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Aluminum Laptop Stand",
+    "description": "Advanced reinforced plastic material with excellent strength and flexibility.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 28,
+    "materials": [
+      { "id": 3, "quantity": 0.8 },
+      { "id": 7, "quantity": 0.3 }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Executive Office Desk",
+    "description": "Premium executive desk with spacious design and built-in storage.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 50,
+    "materials": [
+      { "id": 16, "quantity": 8 },
+      { "id": 17, "quantity": 5 },
+      { "id": 3, "quantity": 2 }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Smart Home Security System",
+    "description": "State-of-the-art security system with AI-powered surveillance and automation.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 30,
+    "materials": [
+      { "id": 17, "quantity": 1 },
+      { "id": 18, "quantity": 0.8 },
+      { "id": 19, "quantity": 2 }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Outdoor Lounge Chair",
+    "description": "Comfortable lounge chair designed for outdoor relaxation.",
+    "image": "https://cdn-icons-png.flaticon.com/512/10444/10444065.png",
+    "stock": 80,
+    "materials": [
+      { "id": 17, "quantity": 3 },
+      { "id": 18, "quantity": 1 }
+    ]
   }
 ]
