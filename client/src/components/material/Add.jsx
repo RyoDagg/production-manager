@@ -37,13 +37,15 @@ const Add = ({ submit }) => {
                     </div>
                 </div>
                 <div className="mb-3 row">
-                    <label className="col-2 col-form-label">Unit</label>
+                    <label className="col-6 col-form-label">Unit</label>
                     <div className="col-sm-4">
                         <input
                             onChange={(event) => setUnit(event.target.value)}
                             className="form-control" />
                     </div>
-                    <label className="col-2 col-form-label">Stock</label>
+                </div>
+                <div className="mb-3 row">
+                    <label className="col-6 col-form-label">Stock</label>
                     <div className="col-sm-4">
                         <input
                             type="number"
@@ -54,7 +56,7 @@ const Add = ({ submit }) => {
                 <div className="mb-3 text-right">
                     <button
                         onClick={() => submit({ name, description, image, unit, stock })}
-                        className="btn btn-primary">Add</button>
+                        className="btn btn-success">Submit</button>
                 </div>
             </div>
         </div>

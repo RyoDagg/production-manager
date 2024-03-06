@@ -127,7 +127,7 @@ const Add = ({ submit }) => {
                                 submit({ quantity, ProductId: productId })
                             } else { alert('Production Parameters Invalid ❌') }
                         }}
-                        className="btn btn-success">
+                        className={valid?"btn btn-success":"btn btn-outline-danger"}>
                         Submit
                     </button>
                 </div>

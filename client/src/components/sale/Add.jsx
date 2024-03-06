@@ -38,7 +38,7 @@ const Add = ({ submit }) => {
 
     return (
         <div className="row pt-3 border text-center">
-            <h3 className="text-primary mt-2 mb-5">Record New Purchase</h3>
+            <h3 className="text-primary mt-2 mb-5">Record New Sale</h3>
             <div className="col-6 mx-auto">
                 <div className="mb-3 row">
                     <label className="col-4 col-form-label">Material</label>
@@ -103,7 +103,7 @@ const Add = ({ submit }) => {
                     <button
                         disabled={!valid}
                         onClick={() => submit({ ProductId: productId, quantity, unitPrice, client })}
-                        className="btn btn-success">
+                        className={valid ? "btn btn-success" : "btn btn-outline-danger"}>
                         Submit
                     </button>
                 </div>

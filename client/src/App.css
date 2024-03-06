@@ -35,9 +35,9 @@ body {
   font-weight: bold;
   border-radius: 2px;
 }
+.navbar .nav-item.active,
 .navbar .nav-item:hover {
   background-color: var(--secondary);
-  color: #f8e9a7;
   transition: all 0.1s ease-in;
 }
 
@@ -46,4 +46,8 @@ body {
   margin: 0 5px;
   font-size: 17px;
   font-weight: 540;
+}
+
+.col-form-label {
+  font-weight: 600;
 }

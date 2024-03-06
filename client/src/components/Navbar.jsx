@@ -1,8 +1,13 @@
 import { useContext } from "react"
 import { globalContext } from "../App"
+import { useLocation } from "react-router-dom"
 
 const Navbar = () => {
     const { navigateTo } = useContext(globalContext)
+    const { pathname } = useLocation()
+    const resourse = pathname.split("/")[1];
+    console.log(resourse);
+
     return (
         <div>
             <nav className="navbar shadow navbar-expand-lg">
@@ -10,7 +15,8 @@ const Navbar = () => {
                     <a className="navbar-brand" href="/">Production Manager</a>
 
                     <ul className="navbar-nav me-auto ml-4 mb-2 mb-lg-0">
-                        <li className="nav-item">
+                        <li 
+                        className={resourse == 'materials' ? "nav-item active" : "nav-item"}>
                             <a
                                 onClick={() => { navigateTo('/materials') }}
                                 className="nav-link"
@@ -19,7 +25,8 @@ const Navbar = () => {
                                 Materials
                             </a>
                         </li>
-                        <li className="nav-item">
+                        <li 
+                        className={resourse == 'products' ? "nav-item active" : "nav-item"}>
                             <a
                                 onClick={() => { navigateTo('/products') }}
                                 className="nav-link"
@@ -28,14 +35,16 @@ const Navbar = () => {
                                 Products
                             </a>
                         </li>
-                        <li className="nav-item">
+                        <li 
+                        className={resourse == 'productions' ? "nav-item active" : "nav-item"}>
                             <a
                                 onClick={() => { navigateTo('/productions') }}
                                 className="nav-link"
                                 href="#"
                             >Productions</a>
                         </li>
-                        <li className="nav-item">
+                        <li 
+                        className={resourse == 'sales' ? "nav-item active" : "nav-item"}>
                             <a
                                 onClick={() => { navigateTo('/sales') }}
                                 className="nav-link"
@@ -43,7 +52,8 @@ const Navbar = () => {
                                 Sales
                             </a>
                         </li>
-                        <li className="nav-item">
+                        <li 
+                        className={resourse == 'purchases' ? "nav-item active" : "nav-item"}>
                             <a
                                 onClick={() => { navigateTo('/purchases') }}
                                 className="nav-link"
