@@ -20,7 +20,7 @@ const Sale = () => {
     const fetchPurchases = async () => {
         try {
             const { data } = await axios('http://127.0.0.1:3000/api/sale')
-            console.log(data);
+            // console.log(data);
             setSales(data.reverse())
         } catch (error) {
             console.log('Error fetching purchases', error);
